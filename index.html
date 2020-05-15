@@ -21,7 +21,7 @@
         
         <script type="text/javascript">
          //Using the HiveMQ public Broker, with a random client Id
-  var client = new Messaging.Client("tailor.cloudmqtt.com",34045 , "myclientid_" + parseInt(Math.random() * 100, 10));
+  var client = new Messaging.Client("your_hostname",your_port , "myclientid_" + parseInt(Math.random() * 100, 10));
   
   //Gets  called if the websocket/mqtt connection gets disconnected for any reason
   client.onConnectionLost = function (responseObject) {
@@ -38,8 +38,8 @@
   //Connect Options
   var options = {
     useSSL: true,
-    userName: "ecxafhvn",
-    password: "T7rS3vGdFLvG",
+    userName: "your_username",
+    password: "your_password",
     timeout: 3,
      //Gets Called if the connection has sucessfully been established
      onSuccess: function () {
@@ -157,16 +157,6 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
         try {
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
